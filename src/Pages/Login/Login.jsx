@@ -25,7 +25,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 Swal.fire({
-                    title: "Login is Successful",
+                    title: "User Login Successfully",
                     showClass: {
                         popup: `
                         animate__animated
@@ -85,10 +85,10 @@ const Login = () => {
                             <label className="label">
                                 <LoadCanvasTemplate />
                             </label>
-                            <input onBlur={handleValidateCaptcha} type="text" name="captcha" placeholder="type the captcha above" className="input input-bordered" required />
+                            <input onBlur={handleValidateCaptcha} type="text" name="captcha" placeholder="type the captcha above" className="input input-bordered" />
                         </div>
                         <div className="form-control mt-6">
-                            <input disabled={disabled} className="btn btn-primary" type="submit" value="Login" />
+                            <input disabled={false} className="btn btn-primary" type="submit" value="Login" />
                         </div>
                     </form>
                     <p><small>New User?</small> <Link to="/signup">Create an account</Link> </p>
